@@ -103,6 +103,19 @@ fa-dawrf/
 ├── requirements.txt     # 依赖
 ├── LICENSE              # MIT 许可证
 ├── README.md            # 本文件
+├── scripts/             # 原始实验脚本（论文各表/图的真实生成代码，供透明核对）
+│   ├── run_experiments_v2.py   # 主实验（4 数据集 × 5 噪声 × 10 方法）
+│   ├── extend_experiments.py   # 补充实验（BootstrapRF/非对称/实例相关噪声/因子可视化）
+│   ├── tune_fa.py              # δ 敏感度
+│   ├── param_sensitivity.py    # 参数敏感度
+│   ├── app_metrics.py          # 应用场景（纸币真伪鉴别）AUROC
+│   ├── make_exports_v2.py      # 论文全部图表绘制
+│   └── run_experiments.py      # 原始算法实现参考（已提炼为 fa_dawrf.py）
+├── figures/             # 论文编号图（PNG，与正文图 1–7 对应）
+│   ├── method_flow.png        # 图 1：方法流程
+│   ├── combined_{breast_cancer,wine,digits,banknote}.png  # 图 2–5：各数据集 2×2 结果
+│   ├── factor_space.png       # 图 6：因子空间可视化
+│   └── review_flow.png        # 图 7：复核流水线
 └── results/             # 论文引用的全部结果 JSON（随附，可直接核对）
     ├── exp_results_v2.json     # 主实验（含显著性 sig 与消融 ablation）
     ├── noise_robustness.json   # 非对称/实例相关噪声 + 更大规模数据集
@@ -111,6 +124,8 @@ fa-dawrf/
     ├── factor_viz.json         # 因子空间散点 + 密度异常分
     └── app_metrics.json        # 应用场景（纸币真伪鉴别）AUROC
 ```
+
+> **说明**：`scripts/` 中的原始脚本保留论文生成时的原貌（含绝对路径等），用于透明追溯；`reproduce.py` 是无绝对路径、可直接运行的统一复现入口，二者结果等价。
 
 ---
 
