@@ -2,6 +2,8 @@
 
 > **Density-Aware Weighted Random Forest with Factor Analysis for Label-Noise-Robust Classification**
 
+**开源仓库**：https://github.com/FA-DAWRF/fa-dawrf
+
 本仓库是论文 **《抗标签噪声的密度感知加权随机森林算法》**（中文核心期刊投稿稿）的官方复现代码与实验数据，包含全部算法实现、可一键复现的实验脚本，以及论文引用的完整结果 JSON。
 
 ---
