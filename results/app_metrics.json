@@ -1,0 +1,22 @@
+{
+  "auc": {
+    "breast_cancer": 0.6136461483393723,
+    "wine": 0.9094494169632746,
+    "digits": 0.9561255226563198
+  },
+  "auc_w": {
+    "breast_cancer": 0.429027819753803,
+    "wine": 0.7644844729486386,
+    "digits": 0.834950451868913
+  },
+  "order": [
+    "breast_cancer",
+    "wine",
+    "digits"
+  ],
+  "dname_cn": {
+    "breast_cancer": "乳腺癌",
+    "wine": "葡萄酒",
+    "digits": "数字"
+  }
+}
